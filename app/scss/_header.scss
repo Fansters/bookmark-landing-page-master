@@ -1,0 +1,32 @@
+.header {
+	nav {
+		padding: 35px 28px;
+	}
+	&__logo {
+		img {
+		}
+	}
+	&__burger {
+		> span {
+			display: block;
+			width: 16px;
+			height: 2px;
+			background-color: $veryDarkBlue;
+
+			&:not(:last-child) {
+				margin-bottom: 3px;
+			}
+		}
+	}
+	&__links {
+		a {
+			color: $grayishBlue;
+			text-transform: uppercase;
+			font-weight: 500;
+		}
+	}
+	&__cta {
+		color: #fff;
+      background-color: $softRed;
+	}
+}
