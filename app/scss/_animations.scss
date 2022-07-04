@@ -1,14 +1,31 @@
-@keyframes faade-in {
+@keyframes fade-in {
 	from {
-		display: none;
+      visibility: hidden;
 		opacity: 0;
 	}
-	1% {
-		display: block;
-		opacity: 0;
-	}
+   1%{
+      visibility: visible;
+   }
 	to {
-		// display: block;
 		opacity: 0.95;
 	}
+}
+.fade-in{
+   animation: fade-in 0.2s ease-in-out forwards;
+}
+@keyframes fade-out {
+	from {
+      visibility: visible;
+		opacity: .95;
+	}
+   99%{
+      visibility: visible;
+   }
+	to {
+      visibility: hidden;
+		opacity: 0;
+	}
+}
+.fade-out{
+   animation: fade-out 0.2s ease-in-out forwards;
 }
