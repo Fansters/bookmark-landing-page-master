@@ -1,12 +1,17 @@
+.has-fade{
+   visibility: hidden;
+}
+
 @keyframes fade-in {
 	from {
-      visibility: hidden;
+      // visibility: hidden;
 		opacity: 0;
 	}
    1%{
       visibility: visible;
    }
 	to {
+      visibility: visible;
 		opacity: 0.95;
 	}
 }
