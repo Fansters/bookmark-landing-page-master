@@ -1,27 +1,93 @@
 .header nav {
+  position: relative;
+  z-index: 5;
   padding: 35px 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header__logo {
+  line-height: 1.3125rem;
+}
+
+.header__logo img {
+  width: 8rem;
+  height: 1.3125rem;
+  margin: auto;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 .header__burger > span {
+  position: relative;
   display: block;
   width: 16px;
   height: 2px;
   background-color: #252b46;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  -webkit-transform-origin: 1px 1px;
+          transform-origin: 1px 1px;
 }
 
 .header__burger > span:not(:last-child) {
   margin-bottom: 3px;
 }
 
+.header__burger .spanWhite {
+  background-color: #fff;
+}
+
+.header__burger.open > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header__burger.open > span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__burger.open > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .header__links a {
   color: #9194a1;
   text-transform: uppercase;
   font-weight: 500;
+  font-size: 12px;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.header__links a:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header__links a:hover {
+  color: #fa5757;
 }
 
 .header__cta {
-  color: #fff;
   background-color: #fa5757;
+}
+
+.header__cta:hover {
+  color: #fa5757 !important;
+  background-color: #fff;
+  border: solid 2px #fa5757;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #252b46;
+  opacity: .95;
+  z-index: 1;
 }
 
 html {
@@ -79,13 +145,16 @@ a:hover {
 
 button,
 .button {
-  padding: .875rem 2.1875rem;
+  padding: .75rem 2.0625rem;
   border: solid 2px transparent;
   border-radius: 6px;
+  color: #fff !important;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 2px;
   cursor: pointer;
+  -webkit-transition: all .15s ease-in-out !important;
+  transition: all .15s ease-in-out !important;
 }
 
 @media (max-width: 63.9375em) {
