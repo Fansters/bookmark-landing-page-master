@@ -16,6 +16,10 @@ body {
 	font-weight: 400;
 	color: $grayishBlue;
 	font-family: "Rubik", sans-serif;
+
+   &.no-scroll{
+      overflow: hidden;
+   }
 }
 a,
 a:visited,

@@ -226,6 +226,10 @@ body {
   font-family: "Rubik", sans-serif;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 a,
 a:visited,
 a:hover {
