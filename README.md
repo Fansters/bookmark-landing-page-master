@@ -25,12 +25,16 @@ Users should be able to:
 - Solution URL: [Live Preview](https://calm-tarsier-3cb296.netlify.app/)
 
 ### Built with
+Sementic HTML5
+SCSS;
 
 ### What I learned
 
 ### Continued development
+Responsive design, url bar sizing(mobile devices)
 
 ### Useful resources
+- Android browser bar height - [Stackoverflow](https://stackoverflow.com/questions/50990006/get-android-chrome-browser-address-bar-height-in-js/51176654#51176654)
 
 ## Author
 

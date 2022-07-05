@@ -1,0 +1,40 @@
+.homepage {
+	&__image {
+		background: url(/images/illustration-hero.svg) no-repeat center;
+		background-size: 110%;
+		min-height: 15.625rem;
+	}
+
+	&__text {
+		text-align: center;
+		& h1 {
+			color: $veryDarkBlue;
+			margin: 0;
+			padding: 0;
+			line-height: 2rem;
+		}
+		& p {
+			line-height: 1.375rem;
+			font-size: 0.8125rem;
+			color: $grayishBlue;
+			margin: 0;
+			padding: 1rem 0 1.5rem;
+		}
+	}
+	&__buttons {
+		margin-bottom: 4rem;
+	}
+	&__cta,
+	&__ctaGrey {
+		padding: 0.75rem 1rem;
+		background-color: $softBlue;
+		color: $grayish;
+		font-size: 0.75rem;
+		border-radius: 5px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	}
+	&__ctaGrey {
+		background-color: $grayish;
+		color: $veryDarkBlue;
+	}
+}
