@@ -71,7 +71,7 @@
 		background: transparent;
 		padding-bottom: 3.125rem;
 		padding-top: 0.3125rem;
-      width: 100%;
+		width: 100%;
 
 		.link_menu a {
 			text-transform: uppercase;
@@ -80,7 +80,7 @@
 			padding: 1.125rem 0;
 			display: block;
 			text-align: center;
-			color: #FFF;
+			color: #fff;
 
 			&:nth-child(1),
 			&:nth-child(3) {
@@ -89,10 +89,10 @@
 			}
 		}
 		.link_menu .loginBtn {
-			border: 2px solid #FFF;
+			border: 2px solid #fff;
 			border-radius: 6px;
 			margin: 1.5625rem 0 0 0;
-			padding: .5rem 0;
+			padding: 0.5rem 0;
 		}
 		// .social {
 		// 	position: fixed;
@@ -105,8 +105,8 @@
 		}
 	}
 	&__links {
-		a {
-			color: $grayishBlue;
+      a {
+         color: $grayishBlue;
 			text-transform: uppercase;
 			font-weight: 500;
 			font-size: 12px;
@@ -123,6 +123,7 @@
 	&__cta {
 		// color: #fff !important;
 		background-color: $softRed;
+      color: #fff !important;
 
 		&:hover {
 			color: $softRed !important;

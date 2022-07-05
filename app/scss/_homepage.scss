@@ -1,12 +1,25 @@
 .homepage {
+   @include breakpoint-up(large){
+      
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+   }
+   margin-bottom: 2rem;
 	&__image {
 		background: url(/images/illustration-hero.svg) no-repeat center;
 		background-size: 110%;
-		min-height: 15.625rem;
+		min-height: 16.625rem;
+      flex: 1;
+
+      @include breakpoint-up(large){
+         min-height: 40rem;
+      }
 	}
 
 	&__text {
 		text-align: center;
+      flex: 1;
 		& h1 {
 			color: $veryDarkBlue;
 			margin: 0;
@@ -21,9 +34,8 @@
 			padding: 1rem 0 1.5rem;
 		}
 	}
-	&__buttons {
-		margin-bottom: 4rem;
-	}
+	// &__buttons {
+	// }
 	&__cta,
 	&__ctaGrey {
 		padding: 0.75rem 1rem;
