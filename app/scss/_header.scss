@@ -33,8 +33,14 @@
 		z-index: 5;
 		padding-top: 2.1875rem;
 		padding-bottom: 2.1875rem;
-		max-width: 1100px;
+		max-width: 48rem;
 		margin: 0 auto;
+      
+      @include breakpoint-up(large){
+         max-width: 74rem;
+         padding-top: 2.8125rem;
+         padding-bottom: 2.8125rem;
+      }
 	}
 	&__logo {
 		line-height: 1.3125rem;

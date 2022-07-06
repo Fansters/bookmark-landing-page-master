@@ -6,6 +6,7 @@ const header = document.querySelector('.header')
 const bookmarkLogo = document.getElementById('bookmarkImg');
 const overlay = document.querySelector('.overlay');
 const fade = document.querySelectorAll('.has-fade');
+const flex = document.querySelector('.homepage__buttons');
 
 btn.addEventListener('click', function () {
    header.classList.toggle('open');
@@ -29,3 +30,8 @@ btn.addEventListener('click', function () {
    lineTop.classList.toggle('spanWhite');
    lineBottom.classList.toggle('spanWhite');
 })
+
+// window.addEventListener("resize", function () {
+//    if (window.innerWidth > 768) flex.classList.remove("flex");
+//    else flex.classList.add("flex");
+// });
