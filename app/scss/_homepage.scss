@@ -1,57 +1,68 @@
 .homepage {
-   
-   margin: 0 auto;
-   margin-bottom: 2rem;
+	margin: 0 auto;
+	margin-bottom: 2rem;
 
-   &::before{
-      content: "";
-      position: absolute;
-      top: 20%;
-      right: 0;
-      background: $softBlue;
-      width: 15.625rem;
-      height: 10.9375rem;
-      border-radius: 50% 0 0 50% ;
-      z-index: -1;
-   }
-   // position: relative;
+	// position: relative;
 	@include breakpoint-up(large) {
 		display: flex;
 		flex-direction: row-reverse;
 		align-items: center;
-      max-width: 74rem;
+		max-width: 74rem;
 		// height: calc(80vh - 92px);
 		height: 550px;
-
-      &::before{
-         content: "";
-         position: absolute;
-         top:35%;
-         right: 0;
-         background: $softBlue;
-         width: 35%;
-         height: 21.875rem;
-         border-radius: 40% 0 0 40% ;
-         z-index: 0;
-      }
 	}
-	
+
 	&__image {
+		position: relative;
 		background: url(/images/illustration-hero.svg) no-repeat center;
-		background-size: 110%;
+		background-size: contain;
 		min-height: 16.625rem;
-      // z-index: 54;
-      margin-bottom: 1.25rem;
-      
-		@include breakpoint-up(large) {
-         height: 100%;
-         z-index: 54;
-         // padding-left: 9.375rem;
-         background-size: 110%;
-         flex: 1;
-         margin: 0;
+		// z-index: 54;
+		margin-bottom: 1.25rem;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 25%;
+			right: 0;
+			background: $softBlue;
+			width: 75%;
+			height: 11.875rem;
+			border-radius: 30% 0 0 30%;
+			z-index: -1;
+		}
+		@include breakpoint-up(smallest) {
+			&::before {
+				width: 18.75rem;
+			}
+		}
+		@include breakpoint-up(medium) {
+         &::before {
+            width: 25rem;
+				right: 10%;
+			}
 		}
 
+		@include breakpoint-up(large) {
+			height: 100%;
+			// z-index: 54;
+			// padding-left: 9.375rem;
+			background-size: 110%;
+			flex: 1.2;
+			margin: 0;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 30%;
+				right: -7.8125rem;
+				background: $softBlue;
+				width: 500px;
+				height: 21.875rem;
+				border-radius: 30% 0 0 30%;
+				z-index: -1;
+			}
+		}
 	}
 
 	&__text {
@@ -60,8 +71,8 @@
 
 		@include breakpoint-up(large) {
 			text-align: start;
-         padding-right: 9.5rem;
-         flex: .8;
+			padding-right: 9.5rem;
+			flex: 0.8;
 		}
 		& h1 {
 			color: $veryDarkBlue;
@@ -74,42 +85,54 @@
 			}
 		}
 		& p {
-         line-height: 1.375rem;
+			line-height: 1.375rem;
 			font-size: 0.8125rem;
 			color: $grayishBlue;
 			margin: 0;
 			padding: 1rem 0 1.5rem;
-         @include breakpoint-up(large) {
-            font-size: .9375rem;
-            padding: 1.5rem 0;
-
-         }
+			@include breakpoint-up(large) {
+				font-size: 0.9375rem;
+				padding: 1.5rem 0;
+			}
 		}
 	}
 	&__buttons {
-      display: flex;
+		display: flex;
 
-      @include breakpoint-up(large) {
-        display: block;
-      }
+		@include breakpoint-up(large) {
+			display: block;
+		}
 	}
 	&__cta,
 	&__ctaGrey {
-      display: inline-block;
+		display: inline-block;
 		padding: 0.75rem 1rem;
 		background-color: $softBlue;
 		color: $grayish;
 		font-size: 0.75rem;
+		border: solid 2px transparent;
 		border-radius: 5px;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      
-      @include breakpoint-up(large) {
-         margin-right: 1rem;
-         padding: .75rem 1.5rem;
-      }
+		transition: all 0.15s ease-in-out;
+
+		&:hover {
+			background-color: #fff;
+			color: $softBlue;
+			border: solid 2px $softBlue;
+		}
+
+		@include breakpoint-up(large) {
+			margin-right: 1rem;
+			padding: 0.75rem 1.5rem;
+		}
 	}
 	&__ctaGrey {
 		background-color: $grayish;
 		color: $veryDarkBlue;
+
+		&:hover {
+			color: $veryDarkBlue;
+			border: solid 2px $veryDarkBlue;
+		}
 	}
 }
