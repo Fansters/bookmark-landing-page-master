@@ -1,4 +1,6 @@
 .features {
+	margin-top: 8.125rem;
+
 	&__text {
 		color: $veryDarkBlue;
 		text-align: center;
@@ -11,36 +13,46 @@
 			font-size: $fontSmall;
 			color: $grayishBlue;
 			line-height: 1.375rem;
+			margin-bottom: 2.5rem;
 		}
 	}
 	&__btnMenu {
 		text-align: center;
 		overflow: hidden;
+		margin-bottom: 3.75rem;
 	}
 	&__btnMenu button.active::after {
-      opacity: 1;
+		opacity: 1;
 	}
-
-   // bullet shaped svg img
-   &__image{
-      position: relative;
-      background: url(/images/illustration-hero.svg) no-repeat center;
+   
+	// bullet shaped svg img
+	&__image {
+		position: relative;
+		background: url(/images/illustration-features-tab-1.svg) no-repeat center;
 		background-size: contain;
-		min-height: 16.625rem;
+		min-height: 12.5rem;
 		// z-index: 54;
-		margin-bottom: 1.25rem;
-   }
-   &__image::before {
-      content: "";
-      position: absolute;
-      top: 25%;
-      left: 0;
-      background: $softBlue;
-      width: 75%;
-      height: 11.875rem;
-      border-radius: 0 30% 30% 0;
-      z-index: -1;
-   }
+      margin-bottom: 5rem;
+	}
+	.Two {
+      background: url(/images/illustration-features-tab-2.svg) no-repeat center;
+		background-size: contain;
+	}
+	.Three {
+		background: url(/images/illustration-features-tab-3.svg) no-repeat center;
+		background-size: contain;
+	}
+	&__image::before {
+		content: "";
+		position: absolute;
+		top: 25%;
+		left: 0;
+		background: $softBlue;
+		width: 75%;
+		height: 11.875rem;
+		border-radius: 0 30% 30% 0;
+		z-index: -1;
+	}
 	&__tabBtn {
 		// display: block;
 		position: relative;
@@ -87,7 +99,7 @@
 	}
 	.tabs {
 		display: none;
-      animation: fadeEffect .5s; /* Fading effect takes 1 second */
+		animation: fadeEffect 0.5s; /* Fading effect takes 1 second */
 	}
 	&__tabOne {
 	}
