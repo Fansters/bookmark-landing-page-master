@@ -64,6 +64,104 @@
           animation: fade-out 0.2s ease-in-out forwards;
 }
 
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.features__text {
+  color: hsl(229deg, 31%, 21%);
+  text-align: center;
+}
+.features__text h2 {
+  font-size: 1.25rem;
+}
+.features__text p {
+  font-size: 0.875rem;
+  color: hsl(229deg, 8%, 60%);
+  line-height: 1.375rem;
+}
+.features__btnMenu {
+  text-align: center;
+  overflow: hidden;
+}
+.features__btnMenu button.active::after {
+  opacity: 1;
+}
+.features__image {
+  position: relative;
+  background: url(/images/illustration-hero.svg) no-repeat center;
+  background-size: contain;
+  min-height: 16.625rem;
+  margin-bottom: 1.25rem;
+}
+.features__image::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 0;
+  background: hsl(231deg, 69%, 60%);
+  width: 75%;
+  height: 11.875rem;
+  border-radius: 0 30% 30% 0;
+  z-index: -1;
+}
+.features__tabBtn {
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  padding: 1.25rem 2.0625rem;
+  border-radius: 0;
+  font-size: 1rem;
+  color: hsl(229deg, 31%, 21%);
+  text-transform: none;
+  font-weight: 500;
+  letter-spacing: 0.0313rem;
+  opacity: 0.8;
+  font-family: "Rubik", sans-serif;
+}
+.features__tabBtn:nth-child(1) {
+  border-top: 1px solid hsl(229deg, 8%, 60%);
+}
+.features__tabBtn:nth-child(1), .features__tabBtn:nth-child(2), .features__tabBtn:nth-child(3) {
+  border-bottom: 1px solid hsl(229deg, 8%, 60%);
+}
+.features__tabBtn::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background-color: hsl(0deg, 94%, 66%);
+  transition: all 0.15s linear;
+  opacity: 0;
+}
+.features__tabBtn:hover::after {
+  opacity: 1;
+}
+.features .tabs {
+  display: none;
+  -webkit-animation: fadeEffect 0.5s;
+          animation: fadeEffect 0.5s;
+  /* Fading effect takes 1 second */
+}
 .header.open .overlay {
   display: block;
 }
@@ -266,7 +364,7 @@
 }
 .homepage__text p {
   line-height: 1.375rem;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   color: hsl(229deg, 8%, 60%);
   margin: 0;
   padding: 1rem 0 1.5rem;

@@ -4,9 +4,26 @@ const lineTop = document.querySelector('.line1');
 const lineBottom = document.querySelector('.line3');
 const header = document.querySelector('.header')
 const bookmarkLogo = document.getElementById('bookmarkImg');
-const overlay = document.querySelector('.overlay');
 const fade = document.querySelectorAll('.has-fade');
-const flex = document.querySelector('.homepage__buttons');
+const tabs = document.querySelectorAll('.tabs');
+const tabsBtn = document.querySelectorAll('.features__tabBtn');
+const defaultBtn = document.getElementById("defaultOpen");
+// const overlay = document.querySelector('.overlay');
+// const flex = document.querySelector('.homepage__buttons');
+
+const btnTabs = function (evt, tabNr) {
+   tabs.forEach(function (el) {
+      el.style.display = 'none';
+   })
+
+   tabsBtn.forEach(function (el) {
+      el.className = el.className.replace(" active", "");
+   })
+   document.getElementById(tabNr).style.display = "block";
+   evt.currentTarget.className += " active";
+}
+
+
 
 btn.addEventListener('click', function () {
    header.classList.toggle('open');
@@ -31,7 +48,7 @@ btn.addEventListener('click', function () {
    lineBottom.classList.toggle('spanWhite');
 })
 
-// window.addEventListener("resize", function () {
-//    if (window.innerWidth > 768) flex.classList.remove("flex");
-//    else flex.classList.add("flex");
-// });
+
+window.addEventListener('load', (e) => {
+   defaultBtn.click();
+})
