@@ -172,9 +172,9 @@
 .features .tabs {
   display: none;
   -webkit-animation: fadeEffect 0.5s;
-          animation: fadeEffect 0.5s;
-  /* Fading effect takes 1 second */
+          animation: fadeEffect 0.5s; /* Fading effect takes 1 second */
 }
+
 .header.open .overlay {
   display: block;
 }
@@ -425,6 +425,71 @@
 .homepage__ctaGrey:hover {
   color: hsl(229deg, 31%, 21%);
   border: solid 2px hsl(229deg, 31%, 21%);
+}
+
+.extension {
+  margin-top: 6.25rem;
+}
+.extension__text {
+  color: hsl(229deg, 31%, 21%);
+  text-align: center;
+}
+.extension__text h2 {
+  font-size: 1.25rem;
+}
+.extension__text p {
+  font-size: 0.875rem;
+  color: hsl(229deg, 8%, 60%);
+  line-height: 1.375rem;
+  margin-bottom: 2.5rem;
+}
+.extension__cards {
+  text-align: center;
+  margin: 0.625rem auto;
+  max-width: 400px;
+}
+.extension__cards h3 {
+  color: hsl(229deg, 31%, 21%);
+  margin: 25px 0 0;
+}
+.extension__cards p {
+  color: hsl(229deg, 8%, 60%);
+  margin: 10px 0 0;
+  font-size: 0.875rem;
+}
+.extension .card {
+  min-height: 320px;
+  border-radius: 15px;
+  box-shadow: 0px 3px 10px rgba(25, 0, 255, 0.093);
+  margin-bottom: 35px;
+  margin: 0 20px 35px;
+}
+.extension .inner__container {
+  padding: 1.25rem;
+}
+.extension .inner__container img {
+  padding-top: 15px;
+}
+.extension__chrome {
+  flex-direction: column;
+}
+.extension__seperator {
+  overflow: hidden;
+}
+.extension__seperator img {
+  width: 95%;
+}
+.extension__btn {
+  font-size: 13px;
+  text-transform: none;
+  letter-spacing: normal;
+  background-color: hsl(231deg, 69%, 60%);
+  font-weight: 500;
+  font-family: "Rubik", sans-serif;
+  padding: 0.9375rem 1.5625rem;
+  margin: 1.25rem;
+  margin-top: 0.875rem;
+  line-height: normal;
 }
 
 html {

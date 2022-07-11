@@ -1,12 +1,13 @@
 .features {
 	margin-top: 8.125rem;
+   // margin-bottom: 6rem;
 
 	&__text {
 		color: $veryDarkBlue;
 		text-align: center;
 
 		& h2 {
-			font-size: 1.25rem;
+			font-size: $fontHead2;
 		}
 
 		& p {
