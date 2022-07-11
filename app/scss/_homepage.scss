@@ -1,6 +1,7 @@
 .homepage {
 	margin: 0 auto;
 	margin-bottom: 4.0625rem;
+   max-width: 400px;
 
 	// position: relative;
 	@include breakpoint-up(large) {
@@ -37,10 +38,10 @@
 			}
 		}
 		@include breakpoint-up(medium) {
-         &::before {
-            width: 25rem;
-				right: 10%;
-			}
+         // &::before {
+         //    width: 25rem;
+			// 	// right: 10%;
+			// }
 		}
 
 		@include breakpoint-up(large) {
@@ -98,6 +99,8 @@
 	}
 	&__buttons {
 		display: flex;
+      max-width: 375px;
+      margin: auto;
 
 		@include breakpoint-up(large) {
 			display: block;

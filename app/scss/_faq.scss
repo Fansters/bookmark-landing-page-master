@@ -1,0 +1,71 @@
+.faq {
+   max-width: 400px;
+   margin: 0 auto;
+	&__text {
+		color: $veryDarkBlue;
+		text-align: center;
+
+		& h2 {
+			font-size: $fontHead2;
+		}
+
+		& p {
+			font-size: $fontSmall;
+			color: $grayishBlue;
+			line-height: 1.375rem;
+			margin-bottom: 2.5rem;
+		}
+	}
+
+	&__questions {
+		flex-direction: column;
+      max-width: 400px;
+      margin: 0 auto;
+	}
+	.collapsible {
+		background-color: transparent;
+		color: $veryDarkBlue;
+		width: 100%;
+
+		border-radius: 0;
+		text-align: left;
+		font-size: 0.8rem;
+		padding: 1rem 0;
+		text-transform: none;
+		letter-spacing: normal;
+		font-family: "Rubik", sans-serif;
+		font-weight: 400;
+	}
+	.border-bottom {
+		border-bottom: 1px solid $grayishBlue;
+	}
+	.collapsible::after {
+		content: url(/images/icon-arrow.svg);
+		// margin: 3px;
+		float: right;
+	}
+	.active::after {
+		content: url(/images/icon-arrow-red.svg);
+		transform: rotate(180deg);
+	}
+	.content {
+		max-height: 0;
+		overflow: hidden;
+		line-height: 1.9;
+		opacity: 0.75;
+		color: $veryDarkBlue;
+		transition: max-height 0.2s ease-out;
+
+		& p {
+			margin-top: 0;
+		}
+	}
+	&__btn {
+		background-color: $softBlue;
+		text-transform: none;
+		letter-spacing: normal;
+		text-align: center;
+		font-family: "Rubik", sans-serif;
+		margin: 2.5rem auto;
+	}
+}

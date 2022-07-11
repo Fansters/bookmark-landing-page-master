@@ -1,193 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet" />
-		<link rel="stylesheet" href="dist/style.css" />
-		<title>Frontend Mentor | Bookmark landing page</title>
-	</head>
 
-	<body>
-		<header class="header">
-			<div class="overlay has-fade"></div>
-         <div>
-			<nav class="container flex flex-jc-sb flex-ai-c">
-				<a href="/" class="header__logo">
-					<img id="bookmarkImg" src="images/logo-bookmark.svg" alt="Bookmark" />
-				</a>
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet" />
+   <link rel="stylesheet" href="dist/style.css" />
+   <title>Frontend Mentor | Bookmark landing page</title>
+</head>
+
+<body>
+   <header class="header">
+      <div class="overlay has-fade"></div>
+      <div>
+         <nav class="container flex flex-jc-sb flex-ai-c">
+            <a href="/" class="header__logo">
+               <img id="bookmarkImg" src="images/logo-bookmark.svg" alt="Bookmark" />
+            </a>
             <div id="btnBurger" href="#" class="header__burger hide_for_pc">
-					<span class="line1"></span><span class="line2"></span><span class="line3"></span>
-				</div>
-
-				<div class="header__links hide_for_mobile">
-					<a href="#">Features</a><a href="#">Pricing</a><a href="#">Contact</a>
-					<a href="#" class="button header__cta hide_for_mobile">Login</a>
-				</div>
-			</nav>
-			<div class="container header__menu flex flex-jc-sb has-fade">
-				<div class="link_menu">
-					<a href="#">Features</a><a href="#">Pricing</a><a href="#">Contact</a><a class="loginBtn" href="#">Login</a>
-				</div>
-				<div class="social flex flex-jc-c">
-					<a href="#">
-						<img src="images/icon-facebook.svg" alt="Facebook" />
-					</a>
-					<a href="#">
-						<img src="images/icon-twitter.svg" alt="Twitter" />
-					</a>
-				</div>
-			</div>
-		</header>
-
-		<section class="homepage">
-			<div class="homepage__image">
-				<!-- <img src="images/illustration-hero.svg" alt="Tabs"> -->
-			</div>
-			<div class="homepage__text container">
-				<h1>A Simple Bookmark Manager</h1>
-				<p>
-					A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites
-					load instantly. Try it for free.
-				</p>
-				<div class="homepage__buttons flex-jc-sb">
-					<a class="homepage__cta" href="#">Get it on Chrome</a
-					><a class="homepage__ctaGrey" href="#">Get it on Firefox</a>
-				</div>
-			</div>
-		</section>
-
-		<section class="features">
-			<div class="features__text container">
-				<h2>Features</h2>
-				<p>
-					Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between
-					your devices so you can access them on the go.
-				</p>
-			</div>
-			<!-- tabs -->
-			<div class="features__btnMenu container">
-				<button id="defaultOpen" onclick="btnTabs(event, 'One')" class="features__tabBtn">Simple Bookmarking</button>
-				<button onclick="btnTabs(event, 'Two')" class="features__tabBtn">Speedy Searching</button>
-				<button onclick="btnTabs(event, 'Three')" class="features__tabBtn">Easy Sharing</button>
-			</div>
-
-			<!-- tab content -->
-
-			<div id="One" class="features__tabOne tabs">
-            <!-- img div -->
-				<div class="features__image ">
-				</div>
-				<div class="features__text container">
-					<h2 class="features__tabHead">Bookmark in one click</h2>
-					<p class="features__tabPar">
-						Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over
-						how you manage your favourite sites.
-					</p>
-					<button class="button features__cta hide_for_mobile">More Info</button>
-				</div>
-			</div>
-			<div id="Two" class="features__tabTwo tabs">
-            <!-- img div -->
-            <div class="features__image Two ">
-				</div>
-            <div class="features__text container">
-               <h2 class="features__tabHead">Intelligent search</h2>
-               <p class="features__tabPar">
-                  Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of
-                  your bookmarks.
-               </p>
-               <button class="button features__cta hide_for_mobile">More Info</button>
+               <span class="line1"></span><span class="line2"></span><span class="line3"></span>
             </div>
-			</div>
-			<div id="Three" class="features__tabThree tabs">
-            <!-- img div -->
-            <div class="features__image Three ">
-				</div>
-            <div class=" features__text container">
-               <h2 class="features__tabHead">Share your bookmarks</h2>
-               <p class="features__tabPar">
-                  Easily share your bookmarks and collections with others. Create a shareable link that you can send at the
-                  click of a button.
-               </p>
-               <button class="button features__cta hide_for_mobile">More Info</button>
-            </div>
-			</div>
-		</section>
 
-      <section class="extension">
-         <div class="container">
-            <div class="extension__text">
-               <h2>Download the extension</h2>
-               <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite
-                  you’d like us to prioritize.</p>
+            <div class="header__links hide_for_mobile">
+               <a href="#">Features</a><a href="#">Pricing</a><a href="#">Contact</a>
+               <a href="#" class="button header__cta hide_for_mobile">Login</a>
             </div>
-            <div class="extension__cards">
-               <div class="extension__chrome card flex flex-jc-sb">
-                  <div class="inner__container">
-                     <img src="images/logo-chrome.svg" alt="Chrome">
-                     <h3>Add to Chrome</h3>
-                     <p>Minimum version 62</p>
-                  </div>
-                  <div class="extension__seperator">
-                     <img src="images/bg-dots.svg" alt="">
-                  </div>
-                  <button class="extension__btn">Add & Install Extension</button>
-               </div>
-               <div class="extension__firefox card">
-                  <div class="inner__container">
-                     <img src="images/logo-firefox.svg" alt="Chrome">
-                     <h3>Add to Firefox</h3>
-                     <p>Minimum version
-                        55</p>
-                  </div>
-                  <div class="extension__seperator">
-                     <img src="images/bg-dots.svg" alt="">
-                  </div>
-                  <button class="extension__btn">Add & Install Extension</button>
-               </div>
-               <div class="extension__opera card">
-                  <div class="inner__container">
-                     <img src="images/logo-opera.svg" alt="Chrome">
-                     <h3>Add to Opera</h3>
-                     <p>Minimum version 46</p>
-                  </div>
-                  <div class="extension__seperator">
-                     <img src="images/bg-dots.svg" alt="">
-                  </div>
-                  <button class="extension__btn">Add & Install Extension</button>
-               </div>
+         </nav>
+         <div class="container header__menu flex flex-jc-sb has-fade">
+            <div class="link_menu">
+               <a href="#">Features</a><a href="#">Pricing</a><a href="#">Contact</a><a class="loginBtn"
+                  href="#">Login</a>
+            </div>
+            <div class="social flex flex-jc-c">
+               <a href="#">
+                  <img src="images/icon-facebook.svg" alt="Facebook" />
+               </a>
+               <a href="#">
+                  <img src="images/icon-twitter.svg" alt="Twitter" />
+               </a>
             </div>
          </div>
-      </section>
+   </header>
 
-      <section class="faq">
-         <div class="faq__text">
-            <h2>Frequently Asked Questions</h2>
-            <p>Here
-               are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
+   <section class="homepage">
+      <div class="homepage__image">
+         <!-- <img src="images/illustration-hero.svg" alt="Tabs"> -->
+      </div>
+      <div class="homepage__text container">
+         <h1>A Simple Bookmark Manager</h1>
+         <p>
+            A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites
+            load instantly. Try it for free.
+         </p>
+         <div class="homepage__buttons flex-jc-sb">
+            <a class="homepage__cta" href="#">Get it on Chrome</a><a class="homepage__ctaGrey" href="#">Get it on
+               Firefox</a>
          </div>
-         <div class="faq__questions">
-            <!-- js content -->
+      </div>
+   </section>
 
-            <button class="faq__btn">More Info</button>
+   <section class="features">
+      <div class="features__text container">
+         <h2>Features</h2>
+         <p>
+            Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between
+            your devices so you can access them on the go.
+         </p>
+      </div>
+      <!-- tabs -->
+      <div class="features__btnMenu container">
+         <button id="defaultOpen" onclick="btnTabs(event, 'One')" class="features__tabBtn">Simple Bookmarking</button>
+         <button onclick="btnTabs(event, 'Two')" class="features__tabBtn">Speedy Searching</button>
+         <button onclick="btnTabs(event, 'Three')" class="features__tabBtn">Easy Sharing</button>
+      </div>
+
+      <!-- tab content -->
+
+      <div id="One" class="features__tabOne tabs">
+         <!-- img div -->
+         <div class="features__image ">
          </div>
-      </section>
-		  Question 1
-		What is Bookmark? Answer 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget
-		ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis. Question 2 How can I request a new browser?
-		Answer 2 Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse
-		imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse
-		imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse
-		imperdiet. Question 3 Is there a mobile app? Answer 3 Sed consectetur quam id neque fermentum accumsan. Praesent
-		luctus vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet
-		pharetra purus. Sed sollicitudin ex et ultricies bibendum. Question 4 What about other Chromium browsers? Answer 4
-		Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget
-		nisl gravida pellentesque non ut velit. More Info 35,000+ already joined Stay up-to-date with what we’re doing
-		Contact Us Features Pricing Contact -->
-	</body>
-	<script src="app/js/script.js"></script>
+         <div class="features__text container">
+            <h2 class="features__tabHead">Bookmark in one click</h2>
+            <p class="features__tabPar">
+               Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control
+               over
+               how you manage your favourite sites.
+            </p>
+            <button class="button features__cta hide_for_mobile">More Info</button>
+         </div>
+      </div>
+      <div id="Two" class="features__tabTwo tabs">
+         <!-- img div -->
+         <div class="features__image Two ">
+         </div>
+         <div class="features__text container">
+            <h2 class="features__tabHead">Intelligent search</h2>
+            <p class="features__tabPar">
+               Our powerful search feature will help you find saved sites in no time at all. No need to trawl through
+               all of
+               your bookmarks.
+            </p>
+            <button class="button features__cta hide_for_mobile">More Info</button>
+         </div>
+      </div>
+      <div id="Three" class="features__tabThree tabs">
+         <!-- img div -->
+         <div class="features__image Three ">
+         </div>
+         <div class=" features__text container">
+            <h2 class="features__tabHead">Share your bookmarks</h2>
+            <p class="features__tabPar">
+               Easily share your bookmarks and collections with others. Create a shareable link that you can send at the
+               click of a button.
+            </p>
+            <button class="button features__cta hide_for_mobile">More Info</button>
+         </div>
+      </div>
+   </section>
+
+   <section class="extension">
+      <div class="container">
+         <div class="extension__text">
+            <h2>Download the extension</h2>
+            <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite
+               you’d like us to prioritize.</p>
+         </div>
+         <div class="extension__cards">
+            <div class="extension__chrome card flex flex-jc-sb">
+               <div class="inner__container">
+                  <img src="images/logo-chrome.svg" alt="Chrome">
+                  <h3>Add to Chrome</h3>
+                  <p>Minimum version 62</p>
+               </div>
+               <div class="extension__seperator">
+                  <img src="images/bg-dots.svg" alt="">
+               </div>
+               <button class="extension__btn">Add & Install Extension</button>
+            </div>
+            <div class="extension__firefox card flex flex-jc-sb">
+               <div class="inner__container">
+                  <img src="images/logo-firefox.svg" alt="Chrome">
+                  <h3>Add to Firefox</h3>
+                  <p>Minimum version
+                     55</p>
+               </div>
+               <div class="extension__seperator">
+                  <img src="images/bg-dots.svg" alt="">
+               </div>
+               <button class="extension__btn">Add & Install Extension</button>
+            </div>
+            <div class="extension__opera card flex flex-jc-sb">
+               <div class="inner__container">
+                  <img src="images/logo-opera.svg" alt="Chrome">
+                  <h3>Add to Opera</h3>
+                  <p>Minimum version 46</p>
+               </div>
+               <div class="extension__seperator">
+                  <img src="images/bg-dots.svg" alt="">
+               </div>
+               <button class="extension__btn">Add & Install Extension</button>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="faq container">
+      <div class="faq__text">
+         <h2>Frequently Asked Questions</h2>
+         <p>Here
+            are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
+      </div>
+      <div class="faq__questions flex flex-jc-c">
+         <!-- collapsable content -->
+         <div class="border-bottom">
+            <button type="button" class="collapsible">What is Bookmark?</button>
+            <div class="content">
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget
+                  ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis. </p>
+            </div>
+         </div>
+         <div class="border-bottom">
+
+            <button type="button" class="collapsible">How can I request a new browser?</button>
+            <div class="content">
+               <p>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse
+                  imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+                  Suspendisse
+                  imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+                  Suspendisse
+                  imperdiet.</p>
+               </div>
+            </div>
+            <div class="border-bottom">
+
+               <button type="button" class="collapsible">Is there a mobile app?</button>
+               <div class="content">
+                  <p>Sed consectetur quam id neque fermentum accumsan. Praesent
+                     luctus vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit
+                     amet
+                     pharetra purus. Sed sollicitudin ex et ultricies bibendum. </p>
+                  </div>
+               </div>
+               <div class="border-bottom">
+
+                  <button type="button" class="collapsible">What about other Chromium browsers?</button>
+                  <div class="content">
+                     <p>Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae
+                        neque eget
+                        nisl gravida pellentesque non ut velit. </p>
+                     </div>
+                  </div>
+
+         <button class="faq__btn">More Info</button>
+      </div>
+   </section>
+   35,000+ already joined Stay up-to-date with what we’re doing
+   Contact Us Features Pricing Contact -->
+</body>
+<script src="app/js/script.js"></script>
+
 </html>

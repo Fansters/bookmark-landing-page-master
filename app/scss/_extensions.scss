@@ -1,5 +1,7 @@
 .extension {
 	margin-top: 6.25rem;
+   margin: 6.25rem auto 0;
+   max-width: 400px;
 
 	&__text {
 		color: $veryDarkBlue;
@@ -21,7 +23,7 @@
 		text-align: center;
 		margin: 0.625rem auto;
 		// padding:  1.25rem;
-      max-width: 400px;
+		max-width: 400px;
 
 		& h3 {
 			color: $veryDarkBlue;
@@ -31,7 +33,7 @@
 		& p {
 			color: $grayishBlue;
 			margin: 10px 0 0;
-         font-size: 0.875rem;
+			font-size: 0.875rem;
 		}
 	}
 
@@ -39,28 +41,31 @@
 		min-height: 320px;
 		border-radius: 15px;
 		box-shadow: 0px 3px 10px rgba(25, 0, 255, 0.093);
-      margin-bottom: 35px;
-      margin: 0 20px 35px;
+		margin-bottom: 35px;
+		margin: 0 10px 35px;
 	}
 
 	.inner__container {
 		// margin: .625rem;
 		padding: 1.25rem;
 
-      & img{
-         padding-top: 15px;
-      }
+		& img {
+			padding-top: 40px;
+		}
 	}
-	&__chrome {
+	&__chrome,
+	&__firefox,
+	&__opera {
 		flex-direction: column;
 	}
-   &__seperator{
-      overflow: hidden;
 
-      & img{
-         width: 95%;
-      }
-   }
+	&__seperator {
+		overflow: hidden;
+
+		& img {
+			width: 95%;
+		}
+	}
 	&__btn {
 		font-size: 13px;
 		text-transform: none;
@@ -70,7 +75,7 @@
 		font-family: "Rubik", sans-serif;
 		padding: 0.9375rem 1.5625rem;
 		margin: 1.25rem;
-      margin-top: .875rem;
+		margin-top: 0.875rem;
 		line-height: normal;
 		// width: 100%;
 	}

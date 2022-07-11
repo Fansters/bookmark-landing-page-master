@@ -8,9 +8,25 @@ const fade = document.querySelectorAll('.has-fade');
 const tabs = document.querySelectorAll('.tabs');
 const tabsBtn = document.querySelectorAll('.features__tabBtn');
 const defaultBtn = document.getElementById("defaultOpen");
+const questions = document.querySelectorAll('.collapsible');
 // const overlay = document.querySelector('.overlay');
 // const flex = document.querySelector('.homepage__buttons');
 
+// collapsible content
+questions.forEach(function (e) {
+   e.addEventListener('click', function () {
+      this.classList.toggle('active');
+      let content = this.nextElementSibling;
+      if (content.style.maxHeight) {
+         content.style.maxHeight = null;
+      } else {
+         content.style.maxHeight = content.scrollHeight + "px";
+      }
+   })
+})
+
+
+// tabbed content
 const btnTabs = function (evt, tabNr) {
    tabs.forEach(function (el) {
       el.style.display = 'none';
@@ -22,7 +38,6 @@ const btnTabs = function (evt, tabNr) {
    document.getElementById(tabNr).style.display = "block";
    evt.currentTarget.className += " active";
 }
-
 
 
 btn.addEventListener('click', function () {
@@ -48,7 +63,7 @@ btn.addEventListener('click', function () {
    lineBottom.classList.toggle('spanWhite');
 })
 
-
+// on page load open first tabbed content
 window.addEventListener('load', (e) => {
    defaultBtn.click();
 })
