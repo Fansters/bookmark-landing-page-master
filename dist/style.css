@@ -497,7 +497,7 @@
 
 .faq {
   max-width: 400px;
-  margin: 0 auto;
+  margin: 0 auto 4.0625rem;
 }
 .faq__text {
   color: hsl(229deg, 31%, 21%);
@@ -559,6 +559,66 @@
   text-align: center;
   font-family: "Rubik", sans-serif;
   margin: 2.5rem auto;
+}
+
+.footer {
+  font-family: "Rubik", sans-serif;
+}
+.footer .lightBlue {
+  background-color: hsl(231deg, 69%, 60%);
+  padding-top: 4.0625rem;
+  padding-bottom: 3.4375rem;
+}
+.footer h2,
+.footer p {
+  text-align: center;
+  color: hsl(0deg, 0%, 96%);
+  font-weight: 500;
+}
+.footer p {
+  margin: 0 0 0.9375rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+.footer h2 {
+  margin: 0 0 1.875rem;
+}
+.footer input,
+.footer button {
+  border: none;
+  padding: 0.875rem 2.0625rem;
+  width: 100%;
+  border-radius: 5px;
+}
+.footer__cta {
+  background-color: hsl(0deg, 94%, 66%);
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+}
+.footer input {
+  margin: 0 0 0.8125rem;
+  padding: 0.75rem 1.125rem;
+}
+.footer ::-moz-placeholder {
+  opacity: 0.2;
+  font-family: "Rubik", sans-serif;
+}
+.footer :-ms-input-placeholder {
+  opacity: 0.2;
+  font-family: "Rubik", sans-serif;
+}
+.footer ::placeholder {
+  opacity: 0.2;
+  font-family: "Rubik", sans-serif;
+}
+.footer .darkBlue {
+  background-color: hsl(229deg, 31%, 21%);
+  padding-top: 4.0625rem;
+  padding-bottom: 3.4375rem;
 }
 
 html {
