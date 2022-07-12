@@ -1,11 +1,12 @@
 .footer {
 	font-family: "Rubik", sans-serif;
-
+	
 	// upper footer
 	.lightBlue {
 		background-color: $softBlue;
 		padding-top: 4.0625rem;
 		padding-bottom: 3.4375rem;
+      
 	}
 	& h2,
 	p {
@@ -27,6 +28,8 @@
 	}
 	.inputBtn {
 		flex-direction: column;
+      max-width: 25rem;
+      margin: 0 auto;
 	}
 	& input,
 	button {
@@ -89,9 +92,8 @@
 	}
 
 	&__social a {
-
-      &:not(:last-child){
-         margin-right: 2.1875rem;
-      }
+		&:not(:last-child) {
+			margin-right: 2.1875rem;
+		}
 	}
 }

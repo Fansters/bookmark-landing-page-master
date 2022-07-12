@@ -1,6 +1,10 @@
 .faq {
-   max-width: 400px;
-   margin: 0 auto 4.0625rem;
+	max-width: 25rem;
+	margin: 7.1875rem auto 4.0625rem;
+
+	@include breakpoint-up(medium) {
+		max-width: 37.5rem;
+	}
 	&__text {
 		color: $veryDarkBlue;
 		text-align: center;
@@ -19,8 +23,12 @@
 
 	&__questions {
 		flex-direction: column;
-      max-width: 400px;
-      margin: 0 auto;
+		max-width: 25rem;
+		margin: 0 auto;
+
+		@include breakpoint-up(medium) {
+			max-width: 31.25rem;
+		}
 	}
 	.collapsible {
 		background-color: transparent;

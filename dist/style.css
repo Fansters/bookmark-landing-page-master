@@ -83,8 +83,13 @@
 }
 .features {
   margin-top: 8.125rem;
-  max-width: 400px;
+  max-width: 25rem;
   margin: 8.125rem auto 0;
+}
+@media (min-width: 40em) {
+  .features {
+    max-width: 37.5rem;
+  }
 }
 .features__text {
   color: hsl(229deg, 31%, 21%);
@@ -103,7 +108,6 @@
   text-align: center;
   overflow: hidden;
   margin-bottom: 3.75rem;
-  max-width: 400px;
   margin: 0 auto 3.75rem;
 }
 .features__btnMenu button.active::after {
@@ -115,6 +119,13 @@
   background-size: contain;
   min-height: 12.5rem;
   margin-bottom: 5rem;
+}
+@media (min-width: 40em) {
+  .features__image {
+    min-width: 15rem;
+    min-height: 14.5rem;
+    margin: 0;
+  }
 }
 .features .Two {
   background: url(/images/illustration-features-tab-2.svg) no-repeat center;
@@ -135,6 +146,16 @@
   border-radius: 0 30% 30% 0;
   z-index: -1;
 }
+@media (min-width: 30em) {
+  .features__image::before {
+    width: 18.75rem;
+  }
+}
+@media (min-width: 40em) {
+  .features__image::before {
+    display: none;
+  }
+}
 .features__tabBtn {
   position: relative;
   background-color: transparent;
@@ -149,8 +170,22 @@
   opacity: 0.8;
   font-family: "Rubik", sans-serif;
 }
+@media (min-width: 40em) {
+  .features__tabBtn {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 1.25rem 0.9375rem;
+    border: solid 0px transparent;
+  }
+}
 .features__tabBtn:nth-child(1) {
   border-top: 1px solid hsl(229deg, 8%, 60%);
+}
+@media (min-width: 40em) {
+  .features__tabBtn:nth-child(1) {
+    border-top: none;
+  }
 }
 .features__tabBtn:nth-child(1), .features__tabBtn:nth-child(2), .features__tabBtn:nth-child(3) {
   border-bottom: 1px solid hsl(229deg, 8%, 60%);
@@ -170,6 +205,11 @@
   transition: all 0.15s linear;
   opacity: 0;
 }
+@media (min-width: 40em) {
+  .features__tabBtn::after {
+    width: 100%;
+  }
+}
 .features__tabBtn:hover::after {
   opacity: 1;
 }
@@ -177,6 +217,14 @@
   display: none;
   -webkit-animation: fadeEffect 0.5s;
           animation: fadeEffect 0.5s; /* Fading effect takes 1 second */
+  flex-direction: column;
+}
+@media (min-width: 40em) {
+  .features .tabs {
+    flex-direction: row;
+    align-items: center;
+    padding: 0 0 0 1.75rem;
+  }
 }
 
 .header.open .overlay {
@@ -208,6 +256,11 @@
   padding-bottom: 2.1875rem;
   max-width: 48rem;
   margin: 0 auto;
+}
+@media (min-width: 40em) {
+  .header nav {
+    max-width: 37.5rem;
+  }
 }
 @media (min-width: 64em) {
   .header nav {
@@ -299,7 +352,12 @@
 .homepage {
   margin: 0 auto;
   margin-bottom: 4.0625rem;
-  max-width: 400px;
+  max-width: 25rem;
+}
+@media (min-width: 40em) {
+  .homepage {
+    max-width: 37.5rem;
+  }
 }
 @media (min-width: 64em) {
   .homepage {
@@ -316,6 +374,11 @@
   background-size: contain;
   min-height: 16.625rem;
   margin-bottom: 1.25rem;
+}
+@media (min-width: 40em) {
+  .homepage__image {
+    min-height: 17.625rem;
+  }
 }
 .homepage__image::before {
   content: "";
@@ -431,7 +494,12 @@
 .extension {
   margin-top: 6.25rem;
   margin: 6.25rem auto 0;
-  max-width: 400px;
+  max-width: 25rem;
+}
+@media (min-width: 40em) {
+  .extension {
+    max-width: 37.5rem;
+  }
 }
 .extension__text {
   color: hsl(229deg, 31%, 21%);
@@ -448,8 +516,13 @@
 }
 .extension__cards {
   text-align: center;
-  margin: 0.625rem auto;
-  max-width: 400px;
+  margin: 0.625rem auto 0;
+  max-width: 25rem;
+}
+@media (min-width: 40em) {
+  .extension__cards {
+    max-width: 31.25rem;
+  }
 }
 .extension__cards h3 {
   color: hsl(229deg, 31%, 21%);
@@ -496,8 +569,13 @@
 }
 
 .faq {
-  max-width: 400px;
-  margin: 0 auto 4.0625rem;
+  max-width: 25rem;
+  margin: 7.1875rem auto 4.0625rem;
+}
+@media (min-width: 40em) {
+  .faq {
+    max-width: 37.5rem;
+  }
 }
 .faq__text {
   color: hsl(229deg, 31%, 21%);
@@ -514,8 +592,13 @@
 }
 .faq__questions {
   flex-direction: column;
-  max-width: 400px;
+  max-width: 25rem;
   margin: 0 auto;
+}
+@media (min-width: 40em) {
+  .faq__questions {
+    max-width: 31.25rem;
+  }
 }
 .faq .collapsible {
   background-color: transparent;
@@ -587,6 +670,8 @@
 }
 .footer .inputBtn {
   flex-direction: column;
+  max-width: 25rem;
+  margin: 0 auto;
 }
 .footer input,
 .footer button {

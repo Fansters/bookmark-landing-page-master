@@ -35,7 +35,7 @@ const btnTabs = function (evt, tabNr) {
    tabsBtn.forEach(function (el) {
       el.className = el.className.replace(" active", "");
    })
-   document.getElementById(tabNr).style.display = "block";
+   document.getElementById(tabNr).style.display = "flex";
    evt.currentTarget.className += " active";
 }
 
