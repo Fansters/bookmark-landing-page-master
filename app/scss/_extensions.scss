@@ -1,18 +1,31 @@
 .extension {
 	margin-top: 6.25rem;
-   margin: 6.25rem auto 0;
-   max-width: 25rem;
+	margin: 6.25rem auto 0;
+	max-width: 25rem;
 
-   @include breakpoint-up(medium){
-      max-width: 37.5rem;
-   }
+	@include breakpoint-up(medium) {
+		max-width: 37.5rem;
+	}
+	@include breakpoint-up(large) {
+		margin-top: 15rem;
+		max-width: 74rem;
+	}
 
 	&__text {
 		color: $veryDarkBlue;
 		text-align: center;
 
+		@include breakpoint-up(large) {
+			max-width: 34.375rem;
+			margin: 0 auto;
+		}
+
 		& h2 {
 			font-size: $fontHead2;
+
+			@include breakpoint-up(large) {
+				font-size: $fontHead2Desk;
+			}
 		}
 
 		& p {
@@ -20,6 +33,11 @@
 			color: $grayishBlue;
 			line-height: 1.375rem;
 			margin-bottom: 2.5rem;
+
+			@include breakpoint-up(large) {
+				font-size: $fontPDesk;
+				line-height: 1.625rem;
+			}
 		}
 	}
 
@@ -29,9 +47,15 @@
 		// padding:  1.25rem;
 		max-width: 25rem;
 
-      @include breakpoint-up(medium){
-         max-width: 31.25rem;
-      }
+		@include breakpoint-up(medium) {
+			max-width: 31.25rem;
+		}
+		@include breakpoint-up(large) {
+         // min-height: ;
+			display: flex;
+			max-width: 56.25rem;
+			margin: 100px auto 0;
+		}
 
 		& h3 {
 			color: $veryDarkBlue;
@@ -46,11 +70,26 @@
 	}
 
 	.card {
-		min-height: 320px;
+		min-height: 20rem;
 		border-radius: 15px;
-		box-shadow: 0px 3px 10px rgba(25, 0, 255, 0.093);
-		margin-bottom: 35px;
-		margin: 0 10px 35px;
+		box-shadow: 0px 5px 15px rgba(25, 0, 255, 0.1);
+		margin-bottom: 2.1875rem;
+		margin: 0 0.625rem 2.1875rem;
+
+
+
+		@include breakpoint-up(large) {
+			margin: 0 1.125rem 2.1875rem;
+			height: 22.5rem;
+			min-width: 17.5rem;
+
+         &:nth-child(1){
+            margin-top: -2.5rem;
+         }
+         &:nth-child(3){
+            margin-top: 2.5rem;
+         }
+		}
 	}
 
 	.inner__container {
@@ -58,7 +97,7 @@
 		padding: 1.25rem;
 
 		& img {
-			padding-top: 40px;
+			padding-top: 2.5rem;
 		}
 	}
 	&__chrome,
@@ -75,7 +114,7 @@
 		}
 	}
 	&__btn {
-		font-size: 13px;
+		font-size: 0.8125rem;
 		text-transform: none;
 		letter-spacing: normal;
 		background-color: $softBlue;
@@ -85,6 +124,12 @@
 		margin: 1.25rem;
 		margin-top: 0.875rem;
 		line-height: normal;
-		// width: 100%;
+		border: 2px solid transparent;
+
+		&:hover {
+			color: $softBlue;
+			background-color: #fff;
+			border: 2px solid $softBlue;
+		}
 	}
 }

@@ -7,13 +7,23 @@
 	@include breakpoint-up(medium) {
 		max-width: 37.5rem;
 	}
+	@include breakpoint-up(large) {
+		max-width: 74rem;
+	}
 
 	&__text {
 		color: $veryDarkBlue;
 		text-align: center;
 
+		@include breakpoint-up(large) {
+			max-width: 34.375rem;
+			margin: 0 auto;
+		}
 		& h2 {
 			font-size: $fontHead2;
+			@include breakpoint-up(large) {
+				font-size: $fontHead2Desk;
+			}
 		}
 
 		& p {
@@ -21,6 +31,11 @@
 			color: $grayishBlue;
 			line-height: 1.375rem;
 			margin-bottom: 2.5rem;
+
+			@include breakpoint-up(large) {
+				font-size: $fontPDesk;
+				line-height: 1.625rem;
+			}
 		}
 	}
 
@@ -50,6 +65,10 @@
 			min-height: 14.5rem;
 			margin: 0;
 		}
+		@include breakpoint-up(large) {
+			height: 21.875rem;
+			width: 100%;
+		}
 	}
 	.Two {
 		background: url(/images/illustration-features-tab-2.svg) no-repeat center;
@@ -75,7 +94,17 @@
 		}
 
 		@include breakpoint-up(medium) {
-			display: none;
+			visibility: hidden;
+		}
+		@include breakpoint-up(large) {
+			visibility: visible;
+			top: 25%;
+			left: -7.8125rem;
+			background: hsl(231deg, 69%, 60%);
+			width: 90%;
+			height: 21.875rem;
+			border-radius: 0 30% 30% 0;
+			z-index: -1;
 		}
 	}
 	&__tabBtn {
@@ -95,8 +124,16 @@
 
 		@include breakpoint-up(medium) {
 			width: fit-content;
-			padding: 1.25rem 0.9375rem;
+			padding: 1.875rem 0.9375rem;
 			border: solid 0px transparent;
+		}
+
+		@include breakpoint-up(large) {
+			padding: 1.25rem 2.5rem;
+
+			&:hover {
+				color: $softRed;
+			}
 		}
 		&:nth-child(1) {
 			border-top: 1px solid $grayishBlue;
@@ -128,25 +165,54 @@
 			@include breakpoint-up(medium) {
 				width: 100%;
 			}
+			@include breakpoint-up(large) {
+			}
 		}
 
 		&:hover::after {
 			opacity: 1;
+			@include breakpoint-up(large) {
+				opacity: 0;
+			}
 		}
 	}
 	.tabs {
 		display: none;
-		animation: fadeEffect 0.5s; /* Fading effect takes 1 second */
+		animation: fadeEffect 0.5s;
 		flex-direction: column;
 
 		@include breakpoint-up(medium) {
 			flex-direction: row;
 			align-items: center;
 			padding: 0 0 0 1.75rem;
+		}
+		@include breakpoint-up(large) {
+			justify-content: center;
+		}
+	}
 
-			// .tabs:nth-child(2) {
-			// 	flex-direction: row-reverse;
-			// }
+	.tabs .features__text {
+		margin: 0;
+
+		@include breakpoint-up(large) {
+			h2 {
+				font-size: $fontHead2Desk;
+			}
+			p {
+				font-size: $fontPDesk;
+				line-height: 1.625rem;
+			}
+			button {
+				background-color: $softBlue;
+				text-transform: none;
+				letter-spacing: normal;
+				text-align: center;
+				font-family: "Rubik", sans-serif;
+            padding: .875rem 1.5625rem;
+				// margin: 2.5rem auto;
+			}
+			text-align: left;
+			padding-left: 6.25rem;
 		}
 	}
 	// &__tabOne {

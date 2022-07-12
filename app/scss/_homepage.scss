@@ -91,9 +91,11 @@
 			color: $grayishBlue;
 			margin: 0;
 			padding: 1rem 0 1.5rem;
+
 			@include breakpoint-up(large) {
 				font-size: 0.9375rem;
 				padding: 1.5rem 0;
+            line-height: 1.625rem;
 			}
 		}
 	}
@@ -103,6 +105,7 @@
 		margin: auto;
 
 		@include breakpoint-up(large) {
+         margin: 0;
 			display: block;
 		}
 	}
