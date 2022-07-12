@@ -1,6 +1,7 @@
 .footer {
 	font-family: "Rubik", sans-serif;
 
+	// upper footer
 	.lightBlue {
 		background-color: $softBlue;
 		padding-top: 4.0625rem;
@@ -24,35 +25,73 @@
 	& h2 {
 		margin: 0 0 1.875rem;
 	}
-
+	.inputBtn {
+		flex-direction: column;
+	}
 	& input,
 	button {
-      border: none;
-      padding: .875rem 2.0625rem;
+		border: none;
+		padding: 0.875rem 2.0625rem;
 		width: 100%;
-      border-radius: 5px;
+		border-radius: 5px;
 	}
 
-   &__cta{
-      background-color: $softRed;
-      text-transform: none !important;
+	&__cta {
+		background-color: $softRed;
+		text-transform: none !important;
 		letter-spacing: normal !important;
 		text-align: center;
-      font-family: "Rubik", sans-serif;
-   }
+		font-family: "Rubik", sans-serif;
+	}
 
-   & input{
-      margin: 0 0 .8125rem;
-      padding: 0.75rem 1.125rem;
-   }
+	& input {
+		margin: 0 0 0.8125rem;
+		padding: 0.75rem 1.125rem;
+	}
 
-   ::placeholder{
-      opacity: .2;
-      font-family: "Rubik", sans-serif;
-   }
+	::placeholder {
+		opacity: 0.2;
+		font-family: "Rubik", sans-serif;
+	}
+
+	// lower footer
 	.darkBlue {
 		background-color: $veryDarkBlue;
-		padding-top: 4.0625rem;
-		padding-bottom: 3.4375rem;
+		padding-top: 2.1875rem;
+		padding-bottom: 2.1875rem;
+		text-align: center;
+	}
+
+	&__innerCont {
+		flex-direction: column;
+	}
+
+	&__links {
+		padding: 2.1875rem 0 2.5rem;
+	}
+
+	&__links a {
+		display: flex;
+		flex-direction: column;
+		color: $grayishBlue;
+		text-transform: uppercase;
+		font-weight: 500;
+		letter-spacing: 1.5px;
+		font-size: $fontSmall;
+
+		&:not(:last-child) {
+			margin-bottom: 1.875rem;
+		}
+
+		&:hover {
+			color: $grayish;
+		}
+	}
+
+	&__social a {
+
+      &:not(:last-child){
+         margin-right: 2.1875rem;
+      }
 	}
 }

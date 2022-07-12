@@ -585,6 +585,9 @@
 .footer h2 {
   margin: 0 0 1.875rem;
 }
+.footer .inputBtn {
+  flex-direction: column;
+}
 .footer input,
 .footer button {
   border: none;
@@ -617,8 +620,33 @@
 }
 .footer .darkBlue {
   background-color: hsl(229deg, 31%, 21%);
-  padding-top: 4.0625rem;
-  padding-bottom: 3.4375rem;
+  padding-top: 2.1875rem;
+  padding-bottom: 2.1875rem;
+  text-align: center;
+}
+.footer__innerCont {
+  flex-direction: column;
+}
+.footer__links {
+  padding: 2.1875rem 0 2.5rem;
+}
+.footer__links a {
+  display: flex;
+  flex-direction: column;
+  color: hsl(229deg, 8%, 60%);
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  font-size: 0.875rem;
+}
+.footer__links a:not(:last-child) {
+  margin-bottom: 1.875rem;
+}
+.footer__links a:hover {
+  color: hsl(0deg, 0%, 96%);
+}
+.footer__social a:not(:last-child) {
+  margin-right: 2.1875rem;
 }
 
 html {
