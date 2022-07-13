@@ -998,6 +998,13 @@
     padding: 0;
   }
 }
+.footer .header__logo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.675rem 1.5rem;
+}
 
 html {
   font-size: 100%;
