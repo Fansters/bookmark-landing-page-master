@@ -845,6 +845,7 @@
   }
 }
 .footer .inputBtn {
+  position: relative;
   flex-direction: column;
   justify-content: center;
   max-width: 25rem;
@@ -865,7 +866,7 @@
 @media (min-width: 64em) {
   .footer input,
 .footer button {
-    margin: 0 0.5rem;
+    margin: 0 0 0 0.5rem;
     padding: 0.75rem 1.25rem;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -893,16 +894,19 @@
 .footer input {
   margin: 0 0 0.8125rem;
   padding: 0.75rem 1.125rem;
+  border: 2px solid transparent;
 }
 @media (min-width: 64em) {
   .footer input {
-    flex: 1;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 0.875rem 1.375rem;
-    margin: 0 0.5rem;
+    width: 260px;
+    margin: 0 0.5rem 0 0;
   }
+}
+.footer .activeInput {
+  background-image: url(/images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  border: 2px solid hsl(0deg, 94%, 66%);
 }
 .footer ::-moz-placeholder {
   opacity: 0.2;
@@ -936,11 +940,6 @@
   .footer__innerCont {
     flex-direction: row;
     width: 34.375rem;
-  }
-}
-@media (min-width: 64em) {
-  .footer a {
-    padding: 0.625rem 1.5rem 0.625rem 0;
   }
 }
 .footer__links {

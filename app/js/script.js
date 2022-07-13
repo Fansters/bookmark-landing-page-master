@@ -9,7 +9,7 @@ const tabs = document.querySelectorAll('.tabs');
 const tabsBtn = document.querySelectorAll('.features__tabBtn');
 const defaultBtn = document.getElementById("defaultOpen");
 const questions = document.querySelectorAll('.collapsible');
-// const overlay = document.querySelector('.overlay');
+const input = document.querySelector('.input');
 // const flex = document.querySelector('.homepage__buttons');
 
 // collapsible content
@@ -67,3 +67,19 @@ btn.addEventListener('click', function () {
 window.addEventListener('load', (e) => {
    defaultBtn.click();
 })
+
+
+// email verification
+validateEmail = (inputText) => {
+   const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+   if (inputText.value.match(mailformat)) {
+      input.classList.remove('activeInput');
+      document.form1.test.focus();
+      return true;
+   }
+   else {
+      input.classList.add('activeInput');
+      document.form1.test.focus();
+      return false;
+   }
+}

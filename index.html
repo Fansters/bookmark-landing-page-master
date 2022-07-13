@@ -224,8 +224,10 @@
             <p>35,000+ already joined</p>
             <h2>Stay up-to-date with what we're doing</h2>
             <div class="inputBtn flex">
-               <input id="emailAd" type="email" placeholder="Enter your email adress">
-               <button class=" button footer__cta">Contact us</button>
+               <form name="form1" action="#">
+                  <input id="emailAd" class="input" type="text" name="test" placeholder="Enter your email adress">
+               </form>
+               <button class=" button footer__cta" onclick="validateEmail(document.form1.test)">Contact us</button>
             </div>
          </div>
       </div>
