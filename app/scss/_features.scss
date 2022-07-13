@@ -99,11 +99,11 @@
 		@include breakpoint-up(large) {
 			visibility: visible;
 			top: 25%;
-			left: -7.8125rem;
+			left: -48rem;
 			background: hsl(231deg, 69%, 60%);
-			width: 90%;
+			width: 1200px;
 			height: 21.875rem;
-			border-radius: 0 30% 30% 0;
+			border-radius: 0 0% 30% 0;
 			z-index: -1;
 		}
 	}
@@ -208,7 +208,7 @@
 				letter-spacing: normal;
 				text-align: center;
 				font-family: "Rubik", sans-serif;
-            padding: .875rem 1.5625rem;
+				padding: 0.875rem 1.5625rem;
 				// margin: 2.5rem auto;
 			}
 			text-align: left;
