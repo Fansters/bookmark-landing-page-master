@@ -18,6 +18,23 @@
 .fade-in {
 	animation: fade-in 0.2s ease-in-out forwards;
 }
+
+@keyframes rotate {
+	from {
+		// visibility: hidden;
+		opacity: 0;
+	}
+	1% {
+		visibility: visible;
+	}
+	to {
+		visibility: visible;
+		opacity: 0.95;
+	}
+}
+.rotate {
+	animation: rotate 0.2s ease-in-out forwards;
+}
 @keyframes fade-out {
 	from {
 		visibility: visible;

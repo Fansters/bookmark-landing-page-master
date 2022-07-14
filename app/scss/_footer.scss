@@ -162,7 +162,7 @@
 		@include breakpoint-up(large) {
 			display: flex;
 			justify-content: space-between;
-			padding: 1rem 10rem .75rem;
+			padding: 1rem 10rem 0.75rem;
 		}
 	}
 
@@ -197,7 +197,7 @@
 		font-weight: 500;
 		letter-spacing: 1.5px;
 		font-size: $fontSmall;
-      transition: all .2s ease-in-out;
+		transition: all 0.2s ease-in-out;
 
 		@include breakpoint-up(large) {
 			padding: 0.875rem 1.5rem;
@@ -213,8 +213,6 @@
 		}
 
 		&:hover {
-			color: $grayish;
-
 			@include breakpoint-up(large) {
 				color: $softRed;
 			}
@@ -248,7 +246,8 @@
 		transition: all 0.1s ease-in-out;
 	}
 	.red:hover {
-      // background-color: aqua;
-		filter: invert(52%) sepia(92%) saturate(3383%) hue-rotate(331deg) brightness(103%) contrast(96%);
+		@include breakpoint-up(large) {
+			filter: invert(52%) sepia(92%) saturate(3383%) hue-rotate(331deg) brightness(103%) contrast(96%);
+		}
 	}
 }

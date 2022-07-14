@@ -32,6 +32,36 @@
           animation: fade-in 0.2s ease-in-out forwards;
 }
 
+@-webkit-keyframes rotate {
+  from {
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+  }
+  to {
+    visibility: visible;
+    opacity: 0.95;
+  }
+}
+
+@keyframes rotate {
+  from {
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+  }
+  to {
+    visibility: visible;
+    opacity: 0.95;
+  }
+}
+.rotate {
+  -webkit-animation: rotate 0.2s ease-in-out forwards;
+          animation: rotate 0.2s ease-in-out forwards;
+}
+
 @-webkit-keyframes fade-out {
   from {
     visibility: visible;
@@ -554,10 +584,12 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: all 0.15s ease-in-out;
 }
-.homepage__cta:hover, .homepage__ctaGrey:hover {
-  background-color: #fff;
-  color: hsl(231deg, 69%, 60%);
-  border: solid 2px hsl(231deg, 69%, 60%);
+@media (min-width: 64em) {
+  .homepage__cta:hover, .homepage__ctaGrey:hover {
+    background-color: #fff;
+    color: hsl(231deg, 69%, 60%);
+    border: solid 2px hsl(231deg, 69%, 60%);
+  }
 }
 @media (min-width: 64em) {
   .homepage__cta, .homepage__ctaGrey {
@@ -569,9 +601,11 @@
   background-color: hsl(0deg, 0%, 96%);
   color: hsl(229deg, 31%, 21%);
 }
-.homepage__ctaGrey:hover {
-  color: hsl(229deg, 31%, 21%);
-  border: solid 2px hsl(229deg, 31%, 21%);
+@media (min-width: 64em) {
+  .homepage__ctaGrey:hover {
+    color: hsl(229deg, 31%, 21%);
+    border: solid 2px hsl(229deg, 31%, 21%);
+  }
 }
 
 .extension {
@@ -694,10 +728,12 @@
   line-height: normal;
   border: 2px solid transparent;
 }
-.extension__btn:hover {
-  color: hsl(231deg, 69%, 60%);
-  background-color: #fff;
-  border: 2px solid hsl(231deg, 69%, 60%);
+@media (min-width: 64em) {
+  .extension__btn:hover {
+    color: hsl(231deg, 69%, 60%);
+    background-color: #fff;
+    border: 2px solid hsl(231deg, 69%, 60%);
+  }
 }
 
 .faq {
@@ -1006,9 +1042,6 @@
     margin: 0;
   }
 }
-.footer__links a:hover {
-  color: hsl(0deg, 0%, 96%);
-}
 @media (min-width: 64em) {
   .footer__links a:hover {
     color: hsl(0deg, 94%, 66%);
@@ -1040,8 +1073,10 @@
 .footer .red {
   transition: all 0.1s ease-in-out;
 }
-.footer .red:hover {
-  filter: invert(52%) sepia(92%) saturate(3383%) hue-rotate(331deg) brightness(103%) contrast(96%);
+@media (min-width: 64em) {
+  .footer .red:hover {
+    filter: invert(52%) sepia(92%) saturate(3383%) hue-rotate(331deg) brightness(103%) contrast(96%);
+  }
 }
 
 html {

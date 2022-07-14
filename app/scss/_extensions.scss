@@ -51,7 +51,7 @@
 			max-width: 31.25rem;
 		}
 		@include breakpoint-up(large) {
-         // min-height: ;
+			// min-height: ;
 			display: flex;
 			max-width: 56.25rem;
 			margin: 100px auto 0;
@@ -76,19 +76,17 @@
 		margin-bottom: 2.1875rem;
 		margin: 0 0.625rem 2.1875rem;
 
-
-
 		@include breakpoint-up(large) {
 			margin: 0 1.125rem 2.1875rem;
 			height: 22.5rem;
 			min-width: 17.5rem;
 
-         &:nth-child(1){
-            margin-top: -2.5rem;
-         }
-         &:nth-child(3){
-            margin-top: 2.5rem;
-         }
+			&:nth-child(1) {
+				margin-top: -2.5rem;
+			}
+			&:nth-child(3) {
+				margin-top: 2.5rem;
+			}
 		}
 	}
 
@@ -127,9 +125,11 @@
 		border: 2px solid transparent;
 
 		&:hover {
-			color: $softBlue;
-			background-color: #fff;
-			border: 2px solid $softBlue;
+			@include breakpoint-up(large) {
+				color: $softBlue;
+				background-color: #fff;
+				border: 2px solid $softBlue;
+			}
 		}
 	}
 }
