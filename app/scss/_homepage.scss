@@ -31,23 +31,23 @@
 			content: "";
 			position: absolute;
 			top: 25%;
-			right: 0;
+			right: -175px;
 			background: $softBlue;
-			width: 75%;
-			height: 11.875rem;
-			border-radius: 30% 0 0 30%;
+			width: 400px;
+			height: 11.25rem;
+			border-radius: 0 0 0 30%;
 			z-index: -1;
 		}
-		@include breakpoint-up(smallest) {
+		@include breakpoint-up(medium) {
 			&::before {
-				width: 18.75rem;
+            right: -225px;
+				width: 575px;
+            height: 13rem;
 			}
 		}
 
 		@include breakpoint-up(large) {
 			height: 100%;
-			// z-index: 54;
-			// padding-left: 9.375rem;
 			background-size: 110%;
 			flex: 1.2;
 			margin: 0;

@@ -15,7 +15,7 @@ const form = document.querySelector('.form');
 
 // collapsible content
 questions.forEach((e) => {
-   e.addEventListener('click', () => {
+   e.addEventListener('click', function () {
       this.classList.toggle('active');
       const content = this.nextElementSibling;
       if (content.style.maxHeight) {
@@ -81,6 +81,7 @@ const validateEmail = (inputText) => {
       input.classList.add('activeInput');
       form.classList.remove('notEmail');
       form.classList.add('empty');
+      input.style.borderRadius = '5px 5px 0 0';
    } else {
       input.classList.add('activeInput');
       form.classList.add('notEmail');

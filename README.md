@@ -17,23 +17,36 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot]()
+![Screenshot](https://github.com/Fansters/bookmark-landing-page-master/blob/master/images/preview.png)
 
 ### Links
 
 - Solution URL: [Live Preview](https://calm-tarsier-3cb296.netlify.app/)
 
 ### Built with
-Sementic HTML5
-SCSS;
+
+- Semantic HTML5 markup
+- SCSS custom properties
+- Flexbox
+- Vanilla JS
+- Resposive design
 
 ### What I learned
 
+This project was to refresh previous learned skills in js and css;
+
 ### Continued development
-Responsive design, url bar sizing(mobile devices)
+
+- Form validation, testing
+- Svg img customization
 
 ### Useful resources
-- Android browser bar height - [Stackoverflow](https://stackoverflow.com/questions/50990006/get-android-chrome-browser-address-bar-height-in-js/51176654#51176654)
+
+- How to change the color of an svg element -
+  [Stackoverflow](https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element)
+
+- Providing custom error messages for built-in HTML5 form validation -
+  [Angelika.me](https://angelika.me/2020/02/01/custom-error-messages-for-html5-form-validation/)
 
 ## Author
 

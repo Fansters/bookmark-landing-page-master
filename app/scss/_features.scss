@@ -82,29 +82,28 @@
 		content: "";
 		position: absolute;
 		top: 25%;
-		left: 0;
+		left: -175px;
 		background: $softBlue;
-		width: 75%;
-		height: 11.875rem;
+		width: 400px;
+		height: 11.25rem;
 		border-radius: 0 30% 30% 0;
 		z-index: -1;
-
-		@include breakpoint-up(smallest) {
-			width: 18.75rem;
-		}
-
-		@include breakpoint-up(medium) {
-			visibility: hidden;
-		}
-		@include breakpoint-up(large) {
-			visibility: visible;
-			top: 25%;
-			left: -48rem;
-			background: hsl(231deg, 69%, 60%);
-			width: 1200px;
-			height: 21.875rem;
-			border-radius: 0 0% 30% 0;
-			z-index: -1;
+	}
+	@include breakpoint-up(medium) {
+		&__image::before {
+			left: -375px;
+			width: 550px;
+			height: 11rem;
+			@include breakpoint-up(large) {
+				visibility: visible;
+				top: 25%;
+				left: -48rem;
+				background: hsl(231deg, 69%, 60%);
+				width: 72rem;
+				height: 19rem;
+				border-radius: 0 0% 25% 0;
+				z-index: -1;
+			}
 		}
 	}
 	&__tabBtn {
