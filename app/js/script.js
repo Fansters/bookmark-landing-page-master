@@ -13,31 +13,12 @@ const input = document.querySelector('.input');
 const footerBtn = document.getElementById('footerBtn');
 const form = document.querySelector('.form');
 
-// collapsible content
-questions.forEach((e) => {
-   e.addEventListener('click', function () {
-      this.classList.toggle('active');
-      const content = this.nextElementSibling;
-      if (content.style.maxHeight) {
-         content.style.maxHeight = null;
-      } else {
-         content.style.maxHeight = content.scrollHeight + "px";
-      }
-   })
+
+
+// on page load open first tabbed content
+window.addEventListener('load', () => {
+   defaultBtn.click();
 })
-
-// tabbed content
-const btnTabs = (evt, tabNr) => {
-   tabs.forEach((el) => {
-      el.style.display = 'none';
-   })
-
-   tabsBtn.forEach((el) => {
-      el.className = el.className.replace(" active", "");
-   })
-   document.getElementById(tabNr).style.display = "flex";
-   evt.currentTarget.className += " active";
-}
 
 //  burger menu
 btn.addEventListener('click', () => {
@@ -60,9 +41,30 @@ btn.addEventListener('click', () => {
    lineBottom.classList.toggle('spanWhite');
 })
 
-// on page load open first tabbed content
-window.addEventListener('load', (e) => {
-   defaultBtn.click();
+// tabbed content
+const btnTabs = (evt, tabNr) => {
+   tabs.forEach((el) => {
+      el.style.display = 'none';
+   })
+
+   tabsBtn.forEach((el) => {
+      el.className = el.className.replace(" active", "");
+   })
+   document.getElementById(tabNr).style.display = "flex";
+   evt.currentTarget.className += " active";
+}
+
+// collapsible content
+questions.forEach((e) => {
+   e.addEventListener('click', function () {
+      this.classList.toggle('active');
+      const content = this.nextElementSibling;
+      if (content.style.maxHeight) {
+         content.style.maxHeight = null;
+      } else {
+         content.style.maxHeight = content.scrollHeight + "px";
+      }
+   })
 })
 
 // email verification

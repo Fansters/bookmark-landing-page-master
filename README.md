@@ -48,6 +48,8 @@ This project was to refresh previous learned skills in js and css;
 - Providing custom error messages for built-in HTML5 form validation -
   [Angelika.me](https://angelika.me/2020/02/01/custom-error-messages-for-html5-form-validation/)
 
+- Colorizing SVG Backgrounds - [CSS Tricks](https://css-tricks.com/solved-with-css-colorizing-svg-backgrounds/)
+
 ## Author
 
 - Frontend Mentor - [@Fansteris](https://www.frontendmentor.io/profile/Fansters)
