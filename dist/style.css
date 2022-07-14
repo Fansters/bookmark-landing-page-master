@@ -876,6 +876,12 @@
 }
 .footer button {
   border: 2px solid transparent;
+  margin: 0.8125rem 0 0;
+}
+@media (min-width: 64em) {
+  .footer button {
+    margin: 0 0 0 0.825rem;
+  }
 }
 .footer__cta {
   background-color: hsl(0deg, 94%, 66%);
@@ -883,6 +889,7 @@
   letter-spacing: normal !important;
   text-align: center;
   font-family: "Rubik", sans-serif;
+  align-self: flex-start;
 }
 @media (min-width: 64em) {
   .footer__cta:hover {
@@ -891,15 +898,40 @@
     border: 2px solid hsl(0deg, 94%, 66%);
   }
 }
+.footer .notEmail::after, .footer .empty::after {
+  display: block;
+  background-color: hsl(0deg, 94%, 66%);
+  font-family: "Rubik", sans-serif;
+  width: 100%;
+  font-size: 12px;
+  color: hsl(0deg, 0%, 96%);
+  border-radius: 0 0 5px 5px;
+  font-style: italic;
+  padding: 7px 15px;
+}
+@media (min-width: 64em) {
+  .footer .notEmail::after, .footer .empty::after {
+    width: calc(100% - 0.5rem);
+    padding: 5px 15px;
+  }
+}
+.footer .notEmail::after {
+  content: "Whoops, make sure it's an email";
+}
+.footer .empty::after {
+  content: "The input field is empty";
+}
 .footer input {
-  margin: 0 0 0.8125rem;
   padding: 0.75rem 1.125rem;
   border: 2px solid transparent;
+  outline-width: 0;
 }
 @media (min-width: 64em) {
   .footer input {
     width: 260px;
     margin: 0 0.5rem 0 0;
+    outline-width: 1px;
+    outline-offset: -8px;
   }
 }
 .footer .activeInput {

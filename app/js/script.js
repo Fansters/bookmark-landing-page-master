@@ -10,13 +10,14 @@ const tabsBtn = document.querySelectorAll('.features__tabBtn');
 const defaultBtn = document.getElementById("defaultOpen");
 const questions = document.querySelectorAll('.collapsible');
 const input = document.querySelector('.input');
-// const flex = document.querySelector('.homepage__buttons');
+const footerBtn = document.getElementById('footerBtn');
+const form = document.querySelector('.form');
 
 // collapsible content
-questions.forEach(function (e) {
-   e.addEventListener('click', function () {
+questions.forEach((e) => {
+   e.addEventListener('click', () => {
       this.classList.toggle('active');
-      let content = this.nextElementSibling;
+      const content = this.nextElementSibling;
       if (content.style.maxHeight) {
          content.style.maxHeight = null;
       } else {
@@ -25,38 +26,34 @@ questions.forEach(function (e) {
    })
 })
 
-
 // tabbed content
-const btnTabs = function (evt, tabNr) {
-   tabs.forEach(function (el) {
+const btnTabs = (evt, tabNr) => {
+   tabs.forEach((el) => {
       el.style.display = 'none';
    })
 
-   tabsBtn.forEach(function (el) {
+   tabsBtn.forEach((el) => {
       el.className = el.className.replace(" active", "");
    })
    document.getElementById(tabNr).style.display = "flex";
    evt.currentTarget.className += " active";
 }
 
-
-btn.addEventListener('click', function () {
+//  burger menu
+btn.addEventListener('click', () => {
    header.classList.toggle('open');
    body.classList.toggle('no-scroll')
    if (header.classList.contains('open')) {
-      fade.forEach(function (el) {
+      fade.forEach((el) => {
          el.classList.remove('fade-out')
          el.classList.add('fade-in')
       })
       bookmarkLogo.src = 'images/logo-bookmark_mobile_overlay.svg'
-      // body.classList.add('no-scroll')
    } else {
-      fade.forEach(function (el) {
+      fade.forEach((el) => {
          el.classList.add('fade-out')
          el.classList.remove('fade-in')
       })
-      // overlay.classList.remove('fade-in')
-      // overlay.classList.add('fade-out')
       bookmarkLogo.src = 'images/logo-bookmark.svg'
    }
    lineTop.classList.toggle('spanWhite');
@@ -68,18 +65,29 @@ window.addEventListener('load', (e) => {
    defaultBtn.click();
 })
 
-
 // email verification
-validateEmail = (inputText) => {
+const validateEmail = (inputText) => {
+   inputText = document.form1.test;
    const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+   console.log(inputText.value);
    if (inputText.value.match(mailformat)) {
       input.classList.remove('activeInput');
+      form.classList.remove('notEmail');
+      form.classList.remove('empty');
       document.form1.test.focus();
       return true;
    }
-   else {
+   if (!inputText.value) {
+      form.classList.remove('notEmail');
+      form.classList.add('empty');
+
+   } else {
       input.classList.add('activeInput');
+      form.classList.add('notEmail');
+      form.classList.remove('empty');
+      input.style.borderRadius = '5px 5px 0 0';
       document.form1.test.focus();
-      return false;
    }
 }
+
+footerBtn.addEventListener('click', validateEmail);
