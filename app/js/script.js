@@ -74,13 +74,13 @@ const validateEmail = (inputText) => {
       input.classList.remove('activeInput');
       form.classList.remove('notEmail');
       form.classList.remove('empty');
+      input.style.borderRadius = '5px';
       document.form1.test.focus();
       return true;
-   }
-   if (!inputText.value) {
+   } if (!inputText.value) {
+      input.classList.add('activeInput');
       form.classList.remove('notEmail');
       form.classList.add('empty');
-
    } else {
       input.classList.add('activeInput');
       form.classList.add('notEmail');
